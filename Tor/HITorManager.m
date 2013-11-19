@@ -15,7 +15,18 @@ const char tor_git_revision[] =
 #endif
 "";
 
-#include "HIMainHack.h"
+#import "or/or.h"
+#import "or/dns.h"
+#import "or/main.h"
+#import "or/router.h"
+#import "or/relay.h"
+#import "or/config.h"
+#import "or/control.h"
+#import "or/connection.h"
+#import "or/routerlist.h"
+#import "or/networkstatus.h"
+#import "or/cpuworker.h"
+#import "event2/event.h"
 
 NSString * const kHITorManagerStarted = @"kHITorManagerStarted";
 NSString * const kHITorManagerStopped = @"kHITorManagerStopped";
