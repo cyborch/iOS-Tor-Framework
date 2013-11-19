@@ -22,11 +22,13 @@ const char tor_git_revision[] =
 #import "or/relay.h"
 #import "or/config.h"
 #import "or/control.h"
-#import "or/connection.h"
 #import "or/routerlist.h"
 #import "or/networkstatus.h"
 #import "or/cpuworker.h"
 #import "event2/event.h"
+
+// avoid including "or/connection.h" because included file "or/buffers.h" conflicts with iOS headers
+void connection_bucket_init(void);
 
 NSString * const kHITorManagerStarted = @"kHITorManagerStarted";
 NSString * const kHITorManagerStopped = @"kHITorManagerStopped";
