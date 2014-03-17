@@ -15,6 +15,8 @@ const char tor_git_revision[] =
 #endif
 "";
 
+#define MAIN_PRIVATE
+
 #import "or/or.h"
 #import "or/dns.h"
 #import "or/main.h"
