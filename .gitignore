@@ -32,3 +32,6 @@ Pods/*
 
 # Dependencies
 dependencies/
+
+# Build from iOS-Tor
+iOS-Tor/build/*

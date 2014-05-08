@@ -42,7 +42,7 @@ DEVELOPER=`xcode-select -print-path`
 
 # for continuous integration
 # https://travis-ci.org/mtigas/iOS-OnionBrowser
-if [ "$1" == "--noverify" ]; then
+if [ "$1" == "--noverify" ] || ! which gpg > /dev/null; then
 	VERIFYGPG=false
 fi
 if [ "$2" == "--i386only" ]; then
