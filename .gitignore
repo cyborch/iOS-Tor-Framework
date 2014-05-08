@@ -29,3 +29,6 @@ sourcetreeconfig
 # Podfiles
 Podfile.lock
 Pods/*
+
+# Dependencies
+dependencies/

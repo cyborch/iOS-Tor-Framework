@@ -1,0 +1,933 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E0678F319178855005DC8CA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0678F219178855005DC8CA /* XCTest.framework */; };
+		4E0678F419178855005DC8CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0678E119178855005DC8CA /* Foundation.framework */; };
+		4E0678FB19178855005DC8CA /* iOS-Tor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0678DE19178855005DC8CA /* iOS-Tor.framework */; };
+		4E06790119178855005DC8CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E0678FF19178855005DC8CA /* InfoPlist.strings */; };
+		4E06790319178855005DC8CA /* iOS_TorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E06790219178855005DC8CA /* iOS_TorTests.m */; };
+		4E06790D19178B53005DC8CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E06790C19178B53005DC8CA /* UIKit.framework */; };
+		4E11BF0519178BA30038B9A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0678E119178855005DC8CA /* Foundation.framework */; };
+		4E11BF0B19178CA90038B9A7 /* TorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E11BF0919178CA90038B9A7 /* TorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E11BF0C19178CA90038B9A7 /* TorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E11BF0A19178CA90038B9A7 /* TorManager.m */; };
+		4E11BF0F19178CD60038B9A7 /* TorURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E11BF0D19178CD60038B9A7 /* TorURLProtocol.h */; };
+		4E11BF1019178CD60038B9A7 /* TorURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E11BF0E19178CD60038B9A7 /* TorURLProtocol.m */; };
+		4E11C054191794E40038B9A7 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C048191794E40038B9A7 /* libcrypto.a */; };
+		4E11C055191794E40038B9A7 /* libcurve25519_donna.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C049191794E40038B9A7 /* libcurve25519_donna.a */; };
+		4E11C056191794E40038B9A7 /* libevent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C04A191794E40038B9A7 /* libevent.a */; };
+		4E11C057191794E40038B9A7 /* libevent_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C04B191794E40038B9A7 /* libevent_core.a */; };
+		4E11C058191794E40038B9A7 /* libevent_extra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C04C191794E40038B9A7 /* libevent_extra.a */; };
+		4E11C059191794E50038B9A7 /* libevent_openssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C04D191794E40038B9A7 /* libevent_openssl.a */; };
+		4E11C05A191794E50038B9A7 /* libevent_pthreads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C04E191794E40038B9A7 /* libevent_pthreads.a */; };
+		4E11C05B191794E50038B9A7 /* libor-crypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C04F191794E40038B9A7 /* libor-crypto.a */; };
+		4E11C05C191794E50038B9A7 /* libor-event.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C050191794E40038B9A7 /* libor-event.a */; };
+		4E11C05D191794E50038B9A7 /* libor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C051191794E40038B9A7 /* libor.a */; };
+		4E11C05E191794E50038B9A7 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C052191794E40038B9A7 /* libssl.a */; };
+		4E11C05F191794E50038B9A7 /* libtor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C053191794E40038B9A7 /* libtor.a */; };
+		4E11C1D7191796C10038B9A7 /* geoip in Resources */ = {isa = PBXBuildFile; fileRef = 4E11C1D6191796C10038B9A7 /* geoip */; };
+		4E11C1DF19179A200038B9A7 /* TorWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E11C1DD19179A200038B9A7 /* TorWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E11C1E019179A200038B9A7 /* TorWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E11C1DE19179A200038B9A7 /* TorWrapper.m */; };
+		4E11C1F21917A1180038B9A7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C1F11917A1180038B9A7 /* SystemConfiguration.framework */; };
+		4E11C1F41917A1310038B9A7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C1F31917A1310038B9A7 /* MobileCoreServices.framework */; };
+		4E11C1F61917A14E0038B9A7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C1F51917A14E0038B9A7 /* CFNetwork.framework */; };
+		4E11C1F81917A1610038B9A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C1F71917A1610038B9A7 /* CoreGraphics.framework */; };
+		4E11C25A1917D97C0038B9A7 /* tor_main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4E11C2591917D97C0038B9A7 /* tor_main.c */; };
+		4E11C25B1917E1C20038B9A7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E11C1ED1917A02E0038B9A7 /* libz.dylib */; };
+		4E11C25F1917EBEA0038B9A7 /* torrc in Resources */ = {isa = PBXBuildFile; fileRef = 4E11C25E1917EBEA0038B9A7 /* torrc */; };
+		4EAC3DD8191B9B9F001CDCAD /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D86191B9B9F001CDCAD /* ASIAuthenticationDialog.h */; };
+		4EAC3DD9191B9B9F001CDCAD /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3D87191B9B9F001CDCAD /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DDA191B9B9F001CDCAD /* ASICacheDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D88191B9B9F001CDCAD /* ASICacheDelegate.h */; };
+		4EAC3DDB191B9B9F001CDCAD /* ASIDataCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D89191B9B9F001CDCAD /* ASIDataCompressor.h */; };
+		4EAC3DDC191B9B9F001CDCAD /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3D8A191B9B9F001CDCAD /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DDD191B9B9F001CDCAD /* ASIDataDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D8B191B9B9F001CDCAD /* ASIDataDecompressor.h */; };
+		4EAC3DDE191B9B9F001CDCAD /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3D8C191B9B9F001CDCAD /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DDF191B9B9F001CDCAD /* ASIDownloadCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D8D191B9B9F001CDCAD /* ASIDownloadCache.h */; };
+		4EAC3DE0191B9B9F001CDCAD /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3D8E191B9B9F001CDCAD /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DE1191B9B9F001CDCAD /* ASIFormDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D8F191B9B9F001CDCAD /* ASIFormDataRequest.h */; };
+		4EAC3DE2191B9B9F001CDCAD /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3D90191B9B9F001CDCAD /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DE3191B9B9F001CDCAD /* ASIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D91191B9B9F001CDCAD /* ASIHTTPRequest.h */; };
+		4EAC3DE4191B9B9F001CDCAD /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3D92191B9B9F001CDCAD /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DE5191B9B9F001CDCAD /* ASIHTTPRequestConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D93191B9B9F001CDCAD /* ASIHTTPRequestConfig.h */; };
+		4EAC3DE6191B9B9F001CDCAD /* ASIHTTPRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D94191B9B9F001CDCAD /* ASIHTTPRequestDelegate.h */; };
+		4EAC3DE7191B9B9F001CDCAD /* ASIInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D95191B9B9F001CDCAD /* ASIInputStream.h */; };
+		4EAC3DE8191B9B9F001CDCAD /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3D96191B9B9F001CDCAD /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DE9191B9B9F001CDCAD /* ASINetworkQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D97191B9B9F001CDCAD /* ASINetworkQueue.h */; };
+		4EAC3DEA191B9B9F001CDCAD /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3D98191B9B9F001CDCAD /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DEB191B9B9F001CDCAD /* ASIProgressDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D99191B9B9F001CDCAD /* ASIProgressDelegate.h */; };
+		4EAC3DEC191B9B9F001CDCAD /* ASIWebPageRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D9B191B9B9F001CDCAD /* ASIWebPageRequest.h */; };
+		4EAC3DED191B9B9F001CDCAD /* ASIWebPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3D9C191B9B9F001CDCAD /* ASIWebPageRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DEE191B9B9F001CDCAD /* ASICloudFilesCDNRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3D9E191B9B9F001CDCAD /* ASICloudFilesCDNRequest.h */; };
+		4EAC3DEF191B9B9F001CDCAD /* ASICloudFilesCDNRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3D9F191B9B9F001CDCAD /* ASICloudFilesCDNRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DF0191B9B9F001CDCAD /* ASICloudFilesContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DA0191B9B9F001CDCAD /* ASICloudFilesContainer.h */; };
+		4EAC3DF1191B9B9F001CDCAD /* ASICloudFilesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3DA1191B9B9F001CDCAD /* ASICloudFilesContainer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DF2191B9B9F001CDCAD /* ASICloudFilesContainerRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DA2191B9B9F001CDCAD /* ASICloudFilesContainerRequest.h */; };
+		4EAC3DF3191B9B9F001CDCAD /* ASICloudFilesContainerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3DA3191B9B9F001CDCAD /* ASICloudFilesContainerRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DF4191B9B9F001CDCAD /* ASICloudFilesContainerXMLParserDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DA4191B9B9F001CDCAD /* ASICloudFilesContainerXMLParserDelegate.h */; };
+		4EAC3DF5191B9B9F001CDCAD /* ASICloudFilesContainerXMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3DA5191B9B9F001CDCAD /* ASICloudFilesContainerXMLParserDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DF6191B9B9F001CDCAD /* ASICloudFilesObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DA6191B9B9F001CDCAD /* ASICloudFilesObject.h */; };
+		4EAC3DF7191B9B9F001CDCAD /* ASICloudFilesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3DA7191B9B9F001CDCAD /* ASICloudFilesObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DF8191B9B9F001CDCAD /* ASICloudFilesObjectRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DA8191B9B9F001CDCAD /* ASICloudFilesObjectRequest.h */; };
+		4EAC3DF9191B9B9F001CDCAD /* ASICloudFilesObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3DA9191B9B9F001CDCAD /* ASICloudFilesObjectRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DFA191B9B9F001CDCAD /* ASICloudFilesRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DAA191B9B9F001CDCAD /* ASICloudFilesRequest.h */; };
+		4EAC3DFB191B9B9F001CDCAD /* ASICloudFilesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3DAB191B9B9F001CDCAD /* ASICloudFilesRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DFC191B9B9F001CDCAD /* ASINSXMLParserCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DAD191B9B9F001CDCAD /* ASINSXMLParserCompat.h */; };
+		4EAC3DFD191B9B9F001CDCAD /* ASIS3Bucket.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DAE191B9B9F001CDCAD /* ASIS3Bucket.h */; };
+		4EAC3DFE191B9B9F001CDCAD /* ASIS3Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3DAF191B9B9F001CDCAD /* ASIS3Bucket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3DFF191B9B9F001CDCAD /* ASIS3BucketObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DB0191B9B9F001CDCAD /* ASIS3BucketObject.h */; };
+		4EAC3E00191B9B9F001CDCAD /* ASIS3BucketObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3DB1191B9B9F001CDCAD /* ASIS3BucketObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3E01191B9B9F001CDCAD /* ASIS3BucketRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DB2191B9B9F001CDCAD /* ASIS3BucketRequest.h */; };
+		4EAC3E02191B9B9F001CDCAD /* ASIS3BucketRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3DB3191B9B9F001CDCAD /* ASIS3BucketRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3E03191B9B9F001CDCAD /* ASIS3ObjectRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DB4191B9B9F001CDCAD /* ASIS3ObjectRequest.h */; };
+		4EAC3E04191B9B9F001CDCAD /* ASIS3ObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3DB5191B9B9F001CDCAD /* ASIS3ObjectRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3E05191B9B9F001CDCAD /* ASIS3Request.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DB6191B9B9F001CDCAD /* ASIS3Request.h */; };
+		4EAC3E06191B9B9F001CDCAD /* ASIS3Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3DB7191B9B9F001CDCAD /* ASIS3Request.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3E07191B9B9F001CDCAD /* ASIS3ServiceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3DB8191B9B9F001CDCAD /* ASIS3ServiceRequest.h */; };
+		4EAC3E08191B9B9F001CDCAD /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3DB9191B9B9F001CDCAD /* ASIS3ServiceRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3E29191B9BC8001CDCAD /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3E27191B9BC8001CDCAD /* Reachability.h */; };
+		4EAC3E2A191B9BC8001CDCAD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3E28191B9BC8001CDCAD /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4EAC3E2E191B9BF6001CDCAD /* ULINetSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAC3E2C191B9BF6001CDCAD /* ULINetSocket.h */; };
+		4EAC3E2F191B9BF6001CDCAD /* ULINetSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC3E2D191B9BF6001CDCAD /* ULINetSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4ED21BA8191B702A00FBF84B /* CKHTTPConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ED21BA6191B702A00FBF84B /* CKHTTPConnection.h */; };
+		4ED21BA9191B702A00FBF84B /* CKHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED21BA7191B702A00FBF84B /* CKHTTPConnection.m */; };
+		4ED21BAC191B722100FBF84B /* NSData+Gzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ED21BAA191B722100FBF84B /* NSData+Gzip.h */; };
+		4ED21BAD191B722100FBF84B /* NSData+Gzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED21BAB191B722100FBF84B /* NSData+Gzip.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E0678F719178855005DC8CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E0678D419178854005DC8CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E0678DD19178855005DC8CA;
+			remoteInfo = "iOS-Tor";
+		};
+		4E0678F919178855005DC8CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E0678D419178854005DC8CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E0678DD19178855005DC8CA;
+			remoteInfo = "iOS-Tor";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E0678DE19178855005DC8CA /* iOS-Tor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = "iOS-Tor.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0678E119178855005DC8CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4E0678E519178855005DC8CA /* iOS-Tor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS-Tor-Info.plist"; sourceTree = "<group>"; };
+		4E0678E719178855005DC8CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4E0678E919178855005DC8CA /* iOS-Tor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-Tor-Prefix.pch"; sourceTree = "<group>"; };
+		4E0678F119178855005DC8CA /* iOS-TorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-TorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0678F219178855005DC8CA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4E0678FE19178855005DC8CA /* iOS-TorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS-TorTests-Info.plist"; sourceTree = "<group>"; };
+		4E06790019178855005DC8CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4E06790219178855005DC8CA /* iOS_TorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_TorTests.m; sourceTree = "<group>"; };
+		4E06790C19178B53005DC8CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4E11BF0919178CA90038B9A7 /* TorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorManager.h; sourceTree = "<group>"; };
+		4E11BF0A19178CA90038B9A7 /* TorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorManager.m; sourceTree = "<group>"; };
+		4E11BF0D19178CD60038B9A7 /* TorURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorURLProtocol.h; sourceTree = "<group>"; };
+		4E11BF0E19178CD60038B9A7 /* TorURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorURLProtocol.m; sourceTree = "<group>"; };
+		4E11C048191794E40038B9A7 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		4E11C049191794E40038B9A7 /* libcurve25519_donna.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurve25519_donna.a; sourceTree = "<group>"; };
+		4E11C04A191794E40038B9A7 /* libevent.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libevent.a; sourceTree = "<group>"; };
+		4E11C04B191794E40038B9A7 /* libevent_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libevent_core.a; sourceTree = "<group>"; };
+		4E11C04C191794E40038B9A7 /* libevent_extra.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libevent_extra.a; sourceTree = "<group>"; };
+		4E11C04D191794E40038B9A7 /* libevent_openssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libevent_openssl.a; sourceTree = "<group>"; };
+		4E11C04E191794E40038B9A7 /* libevent_pthreads.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libevent_pthreads.a; sourceTree = "<group>"; };
+		4E11C04F191794E40038B9A7 /* libor-crypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libor-crypto.a"; sourceTree = "<group>"; };
+		4E11C050191794E40038B9A7 /* libor-event.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libor-event.a"; sourceTree = "<group>"; };
+		4E11C051191794E40038B9A7 /* libor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libor.a; sourceTree = "<group>"; };
+		4E11C052191794E40038B9A7 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		4E11C053191794E40038B9A7 /* libtor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtor.a; sourceTree = "<group>"; };
+		4E11C1D6191796C10038B9A7 /* geoip */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = geoip; path = ../../dependencies/share/geoip; sourceTree = "<group>"; };
+		4E11C1DD19179A200038B9A7 /* TorWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorWrapper.h; sourceTree = "<group>"; };
+		4E11C1DE19179A200038B9A7 /* TorWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorWrapper.m; sourceTree = "<group>"; };
+		4E11C1ED1917A02E0038B9A7 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4E11C1F11917A1180038B9A7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4E11C1F31917A1310038B9A7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4E11C1F51917A14E0038B9A7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4E11C1F71917A1610038B9A7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4E11C2481917CAC60038B9A7 /* micro-revision.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = "micro-revision.i"; path = "../../dependencies/include/micro-revision.i"; sourceTree = "<group>"; };
+		4E11C2591917D97C0038B9A7 /* tor_main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tor_main.c; sourceTree = "<group>"; };
+		4E11C25E1917EBEA0038B9A7 /* torrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = torrc; path = "../../../../Downloads/iOS-OnionBrowser-master/OnionBrowser/torrc"; sourceTree = "<group>"; };
+		4EAC3D86191B9B9F001CDCAD /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		4EAC3D87191B9B9F001CDCAD /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		4EAC3D88191B9B9F001CDCAD /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		4EAC3D89191B9B9F001CDCAD /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		4EAC3D8A191B9B9F001CDCAD /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		4EAC3D8B191B9B9F001CDCAD /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		4EAC3D8C191B9B9F001CDCAD /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		4EAC3D8D191B9B9F001CDCAD /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		4EAC3D8E191B9B9F001CDCAD /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		4EAC3D8F191B9B9F001CDCAD /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		4EAC3D90191B9B9F001CDCAD /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		4EAC3D91191B9B9F001CDCAD /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		4EAC3D92191B9B9F001CDCAD /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		4EAC3D93191B9B9F001CDCAD /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		4EAC3D94191B9B9F001CDCAD /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		4EAC3D95191B9B9F001CDCAD /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		4EAC3D96191B9B9F001CDCAD /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		4EAC3D97191B9B9F001CDCAD /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		4EAC3D98191B9B9F001CDCAD /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		4EAC3D99191B9B9F001CDCAD /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		4EAC3D9B191B9B9F001CDCAD /* ASIWebPageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIWebPageRequest.h; sourceTree = "<group>"; };
+		4EAC3D9C191B9B9F001CDCAD /* ASIWebPageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIWebPageRequest.m; sourceTree = "<group>"; };
+		4EAC3D9E191B9B9F001CDCAD /* ASICloudFilesCDNRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICloudFilesCDNRequest.h; sourceTree = "<group>"; };
+		4EAC3D9F191B9B9F001CDCAD /* ASICloudFilesCDNRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASICloudFilesCDNRequest.m; sourceTree = "<group>"; };
+		4EAC3DA0191B9B9F001CDCAD /* ASICloudFilesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICloudFilesContainer.h; sourceTree = "<group>"; };
+		4EAC3DA1191B9B9F001CDCAD /* ASICloudFilesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASICloudFilesContainer.m; sourceTree = "<group>"; };
+		4EAC3DA2191B9B9F001CDCAD /* ASICloudFilesContainerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICloudFilesContainerRequest.h; sourceTree = "<group>"; };
+		4EAC3DA3191B9B9F001CDCAD /* ASICloudFilesContainerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASICloudFilesContainerRequest.m; sourceTree = "<group>"; };
+		4EAC3DA4191B9B9F001CDCAD /* ASICloudFilesContainerXMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICloudFilesContainerXMLParserDelegate.h; sourceTree = "<group>"; };
+		4EAC3DA5191B9B9F001CDCAD /* ASICloudFilesContainerXMLParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASICloudFilesContainerXMLParserDelegate.m; sourceTree = "<group>"; };
+		4EAC3DA6191B9B9F001CDCAD /* ASICloudFilesObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICloudFilesObject.h; sourceTree = "<group>"; };
+		4EAC3DA7191B9B9F001CDCAD /* ASICloudFilesObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASICloudFilesObject.m; sourceTree = "<group>"; };
+		4EAC3DA8191B9B9F001CDCAD /* ASICloudFilesObjectRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICloudFilesObjectRequest.h; sourceTree = "<group>"; };
+		4EAC3DA9191B9B9F001CDCAD /* ASICloudFilesObjectRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASICloudFilesObjectRequest.m; sourceTree = "<group>"; };
+		4EAC3DAA191B9B9F001CDCAD /* ASICloudFilesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICloudFilesRequest.h; sourceTree = "<group>"; };
+		4EAC3DAB191B9B9F001CDCAD /* ASICloudFilesRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASICloudFilesRequest.m; sourceTree = "<group>"; };
+		4EAC3DAD191B9B9F001CDCAD /* ASINSXMLParserCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINSXMLParserCompat.h; sourceTree = "<group>"; };
+		4EAC3DAE191B9B9F001CDCAD /* ASIS3Bucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIS3Bucket.h; sourceTree = "<group>"; };
+		4EAC3DAF191B9B9F001CDCAD /* ASIS3Bucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3Bucket.m; sourceTree = "<group>"; };
+		4EAC3DB0191B9B9F001CDCAD /* ASIS3BucketObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIS3BucketObject.h; sourceTree = "<group>"; };
+		4EAC3DB1191B9B9F001CDCAD /* ASIS3BucketObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3BucketObject.m; sourceTree = "<group>"; };
+		4EAC3DB2191B9B9F001CDCAD /* ASIS3BucketRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIS3BucketRequest.h; sourceTree = "<group>"; };
+		4EAC3DB3191B9B9F001CDCAD /* ASIS3BucketRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3BucketRequest.m; sourceTree = "<group>"; };
+		4EAC3DB4191B9B9F001CDCAD /* ASIS3ObjectRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIS3ObjectRequest.h; sourceTree = "<group>"; };
+		4EAC3DB5191B9B9F001CDCAD /* ASIS3ObjectRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3ObjectRequest.m; sourceTree = "<group>"; };
+		4EAC3DB6191B9B9F001CDCAD /* ASIS3Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIS3Request.h; sourceTree = "<group>"; };
+		4EAC3DB7191B9B9F001CDCAD /* ASIS3Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3Request.m; sourceTree = "<group>"; };
+		4EAC3DB8191B9B9F001CDCAD /* ASIS3ServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIS3ServiceRequest.h; sourceTree = "<group>"; };
+		4EAC3DB9191B9B9F001CDCAD /* ASIS3ServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3ServiceRequest.m; sourceTree = "<group>"; };
+		4EAC3E27191B9BC8001CDCAD /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		4EAC3E28191B9BC8001CDCAD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		4EAC3E2C191B9BF6001CDCAD /* ULINetSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULINetSocket.h; sourceTree = "<group>"; };
+		4EAC3E2D191B9BF6001CDCAD /* ULINetSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULINetSocket.m; sourceTree = "<group>"; };
+		4ED21BA6191B702A00FBF84B /* CKHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKHTTPConnection.h; sourceTree = "<group>"; };
+		4ED21BA7191B702A00FBF84B /* CKHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKHTTPConnection.m; sourceTree = "<group>"; };
+		4ED21BAA191B722100FBF84B /* NSData+Gzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Gzip.h"; path = "Categories/NSData+Gzip.h"; sourceTree = "<group>"; };
+		4ED21BAB191B722100FBF84B /* NSData+Gzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Gzip.m"; path = "Categories/NSData+Gzip.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E0678D919178855005DC8CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E11BF0519178BA30038B9A7 /* Foundation.framework in Frameworks */,
+				4E06790D19178B53005DC8CA /* UIKit.framework in Frameworks */,
+				4E11C1F81917A1610038B9A7 /* CoreGraphics.framework in Frameworks */,
+				4E11C1F61917A14E0038B9A7 /* CFNetwork.framework in Frameworks */,
+				4E11C1F21917A1180038B9A7 /* SystemConfiguration.framework in Frameworks */,
+				4E11C1F41917A1310038B9A7 /* MobileCoreServices.framework in Frameworks */,
+				4E11C25B1917E1C20038B9A7 /* libz.dylib in Frameworks */,
+				4E11C058191794E40038B9A7 /* libevent_extra.a in Frameworks */,
+				4E11C056191794E40038B9A7 /* libevent.a in Frameworks */,
+				4E11C055191794E40038B9A7 /* libcurve25519_donna.a in Frameworks */,
+				4E11C05B191794E50038B9A7 /* libor-crypto.a in Frameworks */,
+				4E11C05D191794E50038B9A7 /* libor.a in Frameworks */,
+				4E11C059191794E50038B9A7 /* libevent_openssl.a in Frameworks */,
+				4E11C054191794E40038B9A7 /* libcrypto.a in Frameworks */,
+				4E11C05A191794E50038B9A7 /* libevent_pthreads.a in Frameworks */,
+				4E11C05C191794E50038B9A7 /* libor-event.a in Frameworks */,
+				4E11C05E191794E50038B9A7 /* libssl.a in Frameworks */,
+				4E11C057191794E40038B9A7 /* libevent_core.a in Frameworks */,
+				4E11C05F191794E50038B9A7 /* libtor.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E0678EE19178855005DC8CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E0678F319178855005DC8CA /* XCTest.framework in Frameworks */,
+				4E0678FB19178855005DC8CA /* iOS-Tor.framework in Frameworks */,
+				4E0678F419178855005DC8CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E0678D319178854005DC8CA = {
+			isa = PBXGroup;
+			children = (
+				4EAC3D85191B9B9F001CDCAD /* ASIHTTPRequest */,
+				4EAC3E2B191B9BF6001CDCAD /* ULINetSocket */,
+				4ED21BAE191B722900FBF84B /* Categories */,
+				4E0678E319178855005DC8CA /* iOS-Tor */,
+				4E0678FC19178855005DC8CA /* iOS-TorTests */,
+				4E0678E019178855005DC8CA /* Frameworks */,
+				4E0678DF19178855005DC8CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E0678DF19178855005DC8CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E0678DE19178855005DC8CA /* iOS-Tor.framework */,
+				4E0678F119178855005DC8CA /* iOS-TorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E0678E019178855005DC8CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E11C047191794E40038B9A7 /* dependencies */,
+				4E0678E119178855005DC8CA /* Foundation.framework */,
+				4E06790C19178B53005DC8CA /* UIKit.framework */,
+				4E11C1F71917A1610038B9A7 /* CoreGraphics.framework */,
+				4E11C1F51917A14E0038B9A7 /* CFNetwork.framework */,
+				4E11C1F31917A1310038B9A7 /* MobileCoreServices.framework */,
+				4E11C1F11917A1180038B9A7 /* SystemConfiguration.framework */,
+				4E11C1ED1917A02E0038B9A7 /* libz.dylib */,
+				4E0678F219178855005DC8CA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E0678E319178855005DC8CA /* iOS-Tor */ = {
+			isa = PBXGroup;
+			children = (
+				4E11BF0919178CA90038B9A7 /* TorManager.h */,
+				4E11BF0A19178CA90038B9A7 /* TorManager.m */,
+				4E11C1DD19179A200038B9A7 /* TorWrapper.h */,
+				4E11C1DE19179A200038B9A7 /* TorWrapper.m */,
+				4E11BF0D19178CD60038B9A7 /* TorURLProtocol.h */,
+				4E11BF0E19178CD60038B9A7 /* TorURLProtocol.m */,
+				4E11C2591917D97C0038B9A7 /* tor_main.c */,
+				4ED21BA6191B702A00FBF84B /* CKHTTPConnection.h */,
+				4ED21BA7191B702A00FBF84B /* CKHTTPConnection.m */,
+				4E0678E419178855005DC8CA /* Supporting Files */,
+			);
+			path = "iOS-Tor";
+			sourceTree = "<group>";
+		};
+		4E0678E419178855005DC8CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E11C2481917CAC60038B9A7 /* micro-revision.i */,
+				4E0678E519178855005DC8CA /* iOS-Tor-Info.plist */,
+				4E0678E619178855005DC8CA /* InfoPlist.strings */,
+				4E0678E919178855005DC8CA /* iOS-Tor-Prefix.pch */,
+				4E11C1D6191796C10038B9A7 /* geoip */,
+				4E11C25E1917EBEA0038B9A7 /* torrc */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E0678FC19178855005DC8CA /* iOS-TorTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E06790219178855005DC8CA /* iOS_TorTests.m */,
+				4E0678FD19178855005DC8CA /* Supporting Files */,
+			);
+			path = "iOS-TorTests";
+			sourceTree = "<group>";
+		};
+		4E0678FD19178855005DC8CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E0678FE19178855005DC8CA /* iOS-TorTests-Info.plist */,
+				4E0678FF19178855005DC8CA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E11C047191794E40038B9A7 /* dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				4E11C048191794E40038B9A7 /* libcrypto.a */,
+				4E11C049191794E40038B9A7 /* libcurve25519_donna.a */,
+				4E11C04A191794E40038B9A7 /* libevent.a */,
+				4E11C04B191794E40038B9A7 /* libevent_core.a */,
+				4E11C04C191794E40038B9A7 /* libevent_extra.a */,
+				4E11C04D191794E40038B9A7 /* libevent_openssl.a */,
+				4E11C04E191794E40038B9A7 /* libevent_pthreads.a */,
+				4E11C04F191794E40038B9A7 /* libor-crypto.a */,
+				4E11C050191794E40038B9A7 /* libor-event.a */,
+				4E11C051191794E40038B9A7 /* libor.a */,
+				4E11C052191794E40038B9A7 /* libssl.a */,
+				4E11C053191794E40038B9A7 /* libtor.a */,
+			);
+			name = dependencies;
+			path = ../dependencies/lib;
+			sourceTree = "<group>";
+		};
+		4EAC3D85191B9B9F001CDCAD /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC3D86191B9B9F001CDCAD /* ASIAuthenticationDialog.h */,
+				4EAC3D87191B9B9F001CDCAD /* ASIAuthenticationDialog.m */,
+				4EAC3D88191B9B9F001CDCAD /* ASICacheDelegate.h */,
+				4EAC3D89191B9B9F001CDCAD /* ASIDataCompressor.h */,
+				4EAC3D8A191B9B9F001CDCAD /* ASIDataCompressor.m */,
+				4EAC3D8B191B9B9F001CDCAD /* ASIDataDecompressor.h */,
+				4EAC3D8C191B9B9F001CDCAD /* ASIDataDecompressor.m */,
+				4EAC3D8D191B9B9F001CDCAD /* ASIDownloadCache.h */,
+				4EAC3D8E191B9B9F001CDCAD /* ASIDownloadCache.m */,
+				4EAC3D8F191B9B9F001CDCAD /* ASIFormDataRequest.h */,
+				4EAC3D90191B9B9F001CDCAD /* ASIFormDataRequest.m */,
+				4EAC3D91191B9B9F001CDCAD /* ASIHTTPRequest.h */,
+				4EAC3D92191B9B9F001CDCAD /* ASIHTTPRequest.m */,
+				4EAC3D93191B9B9F001CDCAD /* ASIHTTPRequestConfig.h */,
+				4EAC3D94191B9B9F001CDCAD /* ASIHTTPRequestDelegate.h */,
+				4EAC3D95191B9B9F001CDCAD /* ASIInputStream.h */,
+				4EAC3D96191B9B9F001CDCAD /* ASIInputStream.m */,
+				4EAC3D97191B9B9F001CDCAD /* ASINetworkQueue.h */,
+				4EAC3D98191B9B9F001CDCAD /* ASINetworkQueue.m */,
+				4EAC3D99191B9B9F001CDCAD /* ASIProgressDelegate.h */,
+				4EAC3D9A191B9B9F001CDCAD /* ASIWebPageRequest */,
+				4EAC3D9D191B9B9F001CDCAD /* CloudFiles */,
+				4EAC3DAC191B9B9F001CDCAD /* S3 */,
+				4EAC3E26191B9BC8001CDCAD /* Reachability */,
+			);
+			name = ASIHTTPRequest;
+			path = ASIHTTPRequest/Classes;
+			sourceTree = "<group>";
+		};
+		4EAC3D9A191B9B9F001CDCAD /* ASIWebPageRequest */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC3D9B191B9B9F001CDCAD /* ASIWebPageRequest.h */,
+				4EAC3D9C191B9B9F001CDCAD /* ASIWebPageRequest.m */,
+			);
+			path = ASIWebPageRequest;
+			sourceTree = "<group>";
+		};
+		4EAC3D9D191B9B9F001CDCAD /* CloudFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC3D9E191B9B9F001CDCAD /* ASICloudFilesCDNRequest.h */,
+				4EAC3D9F191B9B9F001CDCAD /* ASICloudFilesCDNRequest.m */,
+				4EAC3DA0191B9B9F001CDCAD /* ASICloudFilesContainer.h */,
+				4EAC3DA1191B9B9F001CDCAD /* ASICloudFilesContainer.m */,
+				4EAC3DA2191B9B9F001CDCAD /* ASICloudFilesContainerRequest.h */,
+				4EAC3DA3191B9B9F001CDCAD /* ASICloudFilesContainerRequest.m */,
+				4EAC3DA4191B9B9F001CDCAD /* ASICloudFilesContainerXMLParserDelegate.h */,
+				4EAC3DA5191B9B9F001CDCAD /* ASICloudFilesContainerXMLParserDelegate.m */,
+				4EAC3DA6191B9B9F001CDCAD /* ASICloudFilesObject.h */,
+				4EAC3DA7191B9B9F001CDCAD /* ASICloudFilesObject.m */,
+				4EAC3DA8191B9B9F001CDCAD /* ASICloudFilesObjectRequest.h */,
+				4EAC3DA9191B9B9F001CDCAD /* ASICloudFilesObjectRequest.m */,
+				4EAC3DAA191B9B9F001CDCAD /* ASICloudFilesRequest.h */,
+				4EAC3DAB191B9B9F001CDCAD /* ASICloudFilesRequest.m */,
+			);
+			path = CloudFiles;
+			sourceTree = "<group>";
+		};
+		4EAC3DAC191B9B9F001CDCAD /* S3 */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC3DAD191B9B9F001CDCAD /* ASINSXMLParserCompat.h */,
+				4EAC3DAE191B9B9F001CDCAD /* ASIS3Bucket.h */,
+				4EAC3DAF191B9B9F001CDCAD /* ASIS3Bucket.m */,
+				4EAC3DB0191B9B9F001CDCAD /* ASIS3BucketObject.h */,
+				4EAC3DB1191B9B9F001CDCAD /* ASIS3BucketObject.m */,
+				4EAC3DB2191B9B9F001CDCAD /* ASIS3BucketRequest.h */,
+				4EAC3DB3191B9B9F001CDCAD /* ASIS3BucketRequest.m */,
+				4EAC3DB4191B9B9F001CDCAD /* ASIS3ObjectRequest.h */,
+				4EAC3DB5191B9B9F001CDCAD /* ASIS3ObjectRequest.m */,
+				4EAC3DB6191B9B9F001CDCAD /* ASIS3Request.h */,
+				4EAC3DB7191B9B9F001CDCAD /* ASIS3Request.m */,
+				4EAC3DB8191B9B9F001CDCAD /* ASIS3ServiceRequest.h */,
+				4EAC3DB9191B9B9F001CDCAD /* ASIS3ServiceRequest.m */,
+			);
+			path = S3;
+			sourceTree = "<group>";
+		};
+		4EAC3E26191B9BC8001CDCAD /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC3E27191B9BC8001CDCAD /* Reachability.h */,
+				4EAC3E28191B9BC8001CDCAD /* Reachability.m */,
+			);
+			name = Reachability;
+			path = ../External/Reachability;
+			sourceTree = "<group>";
+		};
+		4EAC3E2B191B9BF6001CDCAD /* ULINetSocket */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC3E2C191B9BF6001CDCAD /* ULINetSocket.h */,
+				4EAC3E2D191B9BF6001CDCAD /* ULINetSocket.m */,
+			);
+			name = ULINetSocket;
+			path = ULINetSocket/Classes;
+			sourceTree = "<group>";
+		};
+		4ED21BAE191B722900FBF84B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4ED21BAA191B722100FBF84B /* NSData+Gzip.h */,
+				4ED21BAB191B722100FBF84B /* NSData+Gzip.m */,
+			);
+			name = Categories;
+			path = "iOS-Tor";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4E0678DA19178855005DC8CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EAC3DFA191B9B9F001CDCAD /* ASICloudFilesRequest.h in Headers */,
+				4EAC3DFC191B9B9F001CDCAD /* ASINSXMLParserCompat.h in Headers */,
+				4EAC3DF2191B9B9F001CDCAD /* ASICloudFilesContainerRequest.h in Headers */,
+				4EAC3DE9191B9B9F001CDCAD /* ASINetworkQueue.h in Headers */,
+				4EAC3E01191B9B9F001CDCAD /* ASIS3BucketRequest.h in Headers */,
+				4E11BF0B19178CA90038B9A7 /* TorManager.h in Headers */,
+				4EAC3DEB191B9B9F001CDCAD /* ASIProgressDelegate.h in Headers */,
+				4E11C1DF19179A200038B9A7 /* TorWrapper.h in Headers */,
+				4EAC3DF8191B9B9F001CDCAD /* ASICloudFilesObjectRequest.h in Headers */,
+				4EAC3DE5191B9B9F001CDCAD /* ASIHTTPRequestConfig.h in Headers */,
+				4E11BF0F19178CD60038B9A7 /* TorURLProtocol.h in Headers */,
+				4EAC3E2E191B9BF6001CDCAD /* ULINetSocket.h in Headers */,
+				4EAC3DDD191B9B9F001CDCAD /* ASIDataDecompressor.h in Headers */,
+				4EAC3DEE191B9B9F001CDCAD /* ASICloudFilesCDNRequest.h in Headers */,
+				4EAC3DDA191B9B9F001CDCAD /* ASICacheDelegate.h in Headers */,
+				4EAC3DE1191B9B9F001CDCAD /* ASIFormDataRequest.h in Headers */,
+				4EAC3E29191B9BC8001CDCAD /* Reachability.h in Headers */,
+				4EAC3E05191B9B9F001CDCAD /* ASIS3Request.h in Headers */,
+				4EAC3DD8191B9B9F001CDCAD /* ASIAuthenticationDialog.h in Headers */,
+				4EAC3DDB191B9B9F001CDCAD /* ASIDataCompressor.h in Headers */,
+				4EAC3DF0191B9B9F001CDCAD /* ASICloudFilesContainer.h in Headers */,
+				4EAC3DF4191B9B9F001CDCAD /* ASICloudFilesContainerXMLParserDelegate.h in Headers */,
+				4EAC3DFF191B9B9F001CDCAD /* ASIS3BucketObject.h in Headers */,
+				4EAC3DE6191B9B9F001CDCAD /* ASIHTTPRequestDelegate.h in Headers */,
+				4EAC3DF6191B9B9F001CDCAD /* ASICloudFilesObject.h in Headers */,
+				4ED21BAC191B722100FBF84B /* NSData+Gzip.h in Headers */,
+				4EAC3DDF191B9B9F001CDCAD /* ASIDownloadCache.h in Headers */,
+				4ED21BA8191B702A00FBF84B /* CKHTTPConnection.h in Headers */,
+				4EAC3DFD191B9B9F001CDCAD /* ASIS3Bucket.h in Headers */,
+				4EAC3DEC191B9B9F001CDCAD /* ASIWebPageRequest.h in Headers */,
+				4EAC3DE3191B9B9F001CDCAD /* ASIHTTPRequest.h in Headers */,
+				4EAC3E07191B9B9F001CDCAD /* ASIS3ServiceRequest.h in Headers */,
+				4EAC3DE7191B9B9F001CDCAD /* ASIInputStream.h in Headers */,
+				4EAC3E03191B9B9F001CDCAD /* ASIS3ObjectRequest.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4E0678DD19178855005DC8CA /* iOS-Tor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E06790619178855005DC8CA /* Build configuration list for PBXNativeTarget "iOS-Tor" */;
+			buildPhases = (
+				4E0678D819178855005DC8CA /* Sources */,
+				4E0678D919178855005DC8CA /* Frameworks */,
+				4E0678DA19178855005DC8CA /* Headers */,
+				4E0678DB19178855005DC8CA /* Resources */,
+				4E0678DC19178855005DC8CA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-Tor";
+			productName = "iOS-Tor";
+			productReference = 4E0678DE19178855005DC8CA /* iOS-Tor.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+		4E0678F019178855005DC8CA /* iOS-TorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E06790919178855005DC8CA /* Build configuration list for PBXNativeTarget "iOS-TorTests" */;
+			buildPhases = (
+				4E0678ED19178855005DC8CA /* Sources */,
+				4E0678EE19178855005DC8CA /* Frameworks */,
+				4E0678EF19178855005DC8CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E0678F819178855005DC8CA /* PBXTargetDependency */,
+				4E0678FA19178855005DC8CA /* PBXTargetDependency */,
+			);
+			name = "iOS-TorTests";
+			productName = "iOS-TorTests";
+			productReference = 4E0678F119178855005DC8CA /* iOS-TorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E0678D419178854005DC8CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Mathieu Bolard";
+				TargetAttributes = {
+					4E0678F019178855005DC8CA = {
+						TestTargetID = 4E0678DD19178855005DC8CA;
+					};
+				};
+			};
+			buildConfigurationList = 4E0678D719178854005DC8CA /* Build configuration list for PBXProject "iOS-Tor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = 4E0678D319178854005DC8CA;
+			productRefGroup = 4E0678DF19178855005DC8CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E0678DD19178855005DC8CA /* iOS-Tor */,
+				4E0678F019178855005DC8CA /* iOS-TorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E0678DB19178855005DC8CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E11C1D7191796C10038B9A7 /* geoip in Resources */,
+				4E11C25F1917EBEA0038B9A7 /* torrc in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E0678EF19178855005DC8CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E06790119178855005DC8CA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E0678DC19178855005DC8CA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /usr/bin/python;
+			shellScript = "# TAG: BUILD SCRIPT (do not remove this comment)\n# Build script generated using https://github.com/kstenerud/iOS-Universal-Framework Mk 8 (beta 2012-06-16)\nimport logging\n\n\n##############################################################################\n#\n# Configuration\n#\n##############################################################################\n\n# Select which kind of framework to build.\n#\n# Note: Due to issues with Xcode's build process, if you select\n#       'embeddedframework', it will still show the regular framework\n#       (as a symlink) along side of the embedded framework. Be sure to\n#       instruct your users to copy/move the embedded framework in this case!\n#\n# If your framework contains resources such as images, nibs, momds, plists,\n# zipfiles and such, choose 'embeddedframework'.\n#\n# If your framework contains no resources, choose 'framework'.\n#\nconfig_framework_type = 'framework'\n#config_framework_type = 'embeddedframework'\n\n# Open the build directory in Finder when the universal framework is\n# successfully built.\n#\n# This value can be overridden by setting the UFW_OPEN_BUILD_DIR env variable\n# to True or False.\n#\n# Recommended setting: True\n#\nconfig_open_build_dir = True\n\n# If true, ensures that all public headers are stored in the framework under\n# the same directory hierarchy as they were in the source tree.\n#\n# Xcode by default places all headers at the same top level, but every other\n# build tool in the known universe preserves directory structure. For simple\n# libraries it doesn't really matter much, but for ports of existing software\n# packages or for bigger libraries, it makes sense to have more structure.\n#\n# The default is set to \"False\" since that's what most Xcode users are used to.\n#\n# Recommended setting: True for deep hierarchy projects, False otherwise.\n#\nconfig_deep_header_hierarchy = False\n\n# Specify where the top of the public header hierarchy is. This path is\n# relative to the project's dir (PROJECT_DIR). You can reference environment\n# variables using templating syntax (e.g. \"${TARGET_NAME}/Some/Subdir\")\n#\n# NOTE: Only used if config_deep_header_hierarchy is True.\n#\n# If this is set to None, the script will attempt to figure out for itself\n# where the top of the header hierarchy is by looking for common path prefixes\n# in the public header files. This process can fail if:\n# - You only have one public header file.\n# - Your source header files don't all have a common root.\n#\n# A common approach is to use \"${TARGET_NAME}\", working under the assumption\n# that all of your header files share the common root of a directory under\n# your project with the same name as your target (which is the Xcode default).\n#\n# Recommended setting: \"${TARGET_NAME}\"\n#\nconfig_deep_header_top = \"${TARGET_NAME}\"\n\n# Warn when \"DerivedData\" is detected in any of the header, library, or\n# framework search paths. In almost all cases, references to directories under\n# DerivedData are added as a result of an Xcode bug and must be manually\n# removed.\n#\n# Recommended setting: True\n#\nconfig_warn_derived_data = True\n\n# Warn if no headers were marked public in this framework.\n#\n# Recommended setting: True\n#\nconfig_warn_no_public_headers = True\n\n# Cause the build to fail if any warnings are issued.\n#\n# Recommended setting: True\n#\nconfig_fail_on_warnings = True\n\n# Minimum log level\n#\n# Recommended setting: logging.INFO\n#\nconfig_log_level = logging.INFO\n\n\n##############################################################################\n#\n# Don't touch anything below here unless you know what you're doing.\n#\n##############################################################################\n\nimport collections\nimport json\nimport os\nimport re\nimport shlex\nimport shutil\nimport string\nimport subprocess\nimport sys\nimport time\nimport traceback\n\n\n##############################################################################\n#\n# Globals\n#\n##############################################################################\n\nlog = logging.getLogger('UFW')\n\nissued_warnings = False\n\n\n##############################################################################\n#\n# Classes\n#\n##############################################################################\n\n# Allows the slave build to communicate with the master build.\n#\nclass BuildState:\n\n    def __init__(self):\n        self.reload()\n\n    def reset(self):\n        self.slave_platform = None\n        self.slave_architectures = []\n        self.slave_linked_archive_paths = []\n        self.slave_built_fw_path = None\n        self.slave_built_embedded_fw_path = None\n\n    def set_slave_properties(self, architectures,\n                             linked_archive_paths,\n                             built_fw_path,\n                             built_embedded_fw_path):\n        self.slave_platform = os.environ['PLATFORM_NAME']\n        self.slave_architectures = architectures\n        self.slave_linked_archive_paths = linked_archive_paths\n        self.slave_built_fw_path = built_fw_path\n        self.slave_built_embedded_fw_path = built_embedded_fw_path\n\n    def get_save_path(self):\n        return os.path.join(os.environ['PROJECT_TEMP_DIR'], \"ufw_build_state.json\")\n\n    def persist(self):\n        filename = self.get_save_path()\n        parent = os.path.dirname(filename)\n        if not os.path.isdir(parent):\n            os.makedirs(parent)\n        with open(filename, \"w\") as f:\n            f.write(json.dumps(self.__dict__))\n\n    def reload(self):\n        self.reset()\n        filename = self.get_save_path()\n        if os.path.exists(filename):\n            with open(filename, \"r\") as f:\n                new_dict = json.loads(f.read())\n                if new_dict is not None:\n                    self.__dict__ = dict(self.__dict__.items() + new_dict.items())\n\n\n# Holds information about the current project and build environment.\n#\nclass Project:\n\n    def __init__(self, filename):\n        sourcecode_types = ['sourcecode.c.c',\n                            'sourcecode.c.objc',\n                            'sourcecode.cpp.cpp',\n                            'sourcecode.cpp.objcpp',\n                            'sourcecode.asm.asm',\n                            'sourcecode.asm.llvm',\n                            'sourcecode.nasm']\n\n        self.build_state = BuildState()\n        self.project_data = self.load_from_file(filename)\n        self.target = filter(lambda x: x['name'] == os.environ['TARGET_NAME'], self.project_data['targets'])[0]\n        self.public_headers = self.get_build_phase_files('PBXHeadersBuildPhase', lambda x: x.get('settings', False) and x['settings'].get('ATTRIBUTES', False) and 'Public' in x['settings']['ATTRIBUTES'])\n        self.static_libraries = self.get_build_phase_files('PBXFrameworksBuildPhase', lambda x: x['fileRef']['fileType'] == 'archive.ar' and x['fileRef']['sourceTree'] not in ['DEVELOPER_DIR', 'SDKROOT'])\n        self.static_frameworks = self.get_build_phase_files('PBXFrameworksBuildPhase', lambda x: x['fileRef']['fileType'] == 'wrapper.framework' and x['fileRef']['sourceTree'] not in ['DEVELOPER_DIR', 'SDKROOT'])\n        self.compilable_sources = self.get_build_phase_files('PBXSourcesBuildPhase', lambda x: x['fileRef']['fileType'] in sourcecode_types)\n        self.header_paths = [os.path.join(*x['pathComponents']) for x in self.public_headers]\n\n        self.headers_dir = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['CONTENTS_FOLDER_PATH'], 'Headers')\n        self.libtool_path = os.path.join(os.environ['DT_TOOLCHAIN_DIR'], 'usr', 'bin', 'libtool')\n        self.project_filename = os.path.join(os.environ['PROJECT_FILE_PATH'], \"project.pbxproj\")\n        self.local_exe_path = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['EXECUTABLE_PATH'])\n        self.local_architectures = os.environ['ARCHS'].split(' ')\n        self.local_built_fw_path = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['WRAPPER_NAME'])\n        self.local_built_embedded_fw_path = os.path.splitext(self.local_built_fw_path)[0] + \".embeddedframework\"\n        self.local_linked_archive_paths = [self.get_linked_ufw_archive_path(arch) for arch in self.local_architectures]\n        self.local_platform = os.environ['PLATFORM_NAME']\n        other_platforms = os.environ['SUPPORTED_PLATFORMS'].split(' ')\n        other_platforms.remove(self.local_platform)\n        self.other_platform = other_platforms[0]\n\n        sdk_name = os.environ['SDK_NAME']\n        if not sdk_name.startswith(self.local_platform):\n            raise Exception(\"%s didn't start with %s\" % (sdk_name, self.local_platform))\n        self.sdk_version = sdk_name[len(self.local_platform):]\n\n    # Load an Xcode project file.\n    #\n    def load_from_file(self, filename):\n        project_file = json.loads(subprocess.check_output([\"plutil\", \"-convert\", \"json\", \"-o\", \"-\", filename]))\n        all_objects = project_file['objects']\n        del project_file['objects']\n        for obj in all_objects.values():\n            self.fix_keys(obj)\n        self.unpack_objects(self.build_dereference_list(all_objects, None, None, project_file))\n        self.unpack_objects(self.build_dereference_list(all_objects, None, None, all_objects.values()))\n        project_data = project_file['rootObject']\n        self.build_full_paths(project_data, splitpath(os.environ['SOURCE_ROOT']))\n        return project_data\n\n    def is_key(self, obj):        \n        return isinstance(obj, basestring) and len(obj) == 24 and re.search('^[0-9a-fA-F]+$', obj) is not None\n    \n    def build_dereference_list(self, all_objects, parent, key, obj):\n        deref_list = []\n        if self.is_key(obj):\n            dereferenced = all_objects.get(obj, obj)\n            if dereferenced is not obj:\n                deref_list.append((parent, key, obj, dereferenced))\n        elif isinstance(obj, collections.Mapping):\n            for k, v in obj.iteritems():\n                deref_list += self.build_dereference_list(all_objects, obj, k, v)\n        elif isinstance(obj, collections.Iterable) and not isinstance(obj, basestring):\n            for item in obj:\n                deref_list += self.build_dereference_list(all_objects, obj, None, item)\n        return deref_list\n    \n    def unpack_objects(self, deref_list):\n        for parent, key, orig, obj in deref_list:\n            if key is None:\n                parent.remove(orig)\n                parent.append(obj)\n            else:\n                parent[key] = obj\n\n    # Store the full path, separated into components, to a node inside the node\n    # as \"pathComponents\". Also recurse into that node if it's a group.\n    #\n    def build_full_paths(self, node, base_path):\n        # Some nodes are relative to a different source tree, specified as an\n        # env variable.\n        if node.get('sourceTree', '<group>') != '<group>':\n            new_base_path = os.environ.get(node['sourceTree'], None)\n            if new_base_path:\n                base_path = splitpath(new_base_path)\n        # Add the current node's path, if any.\n        if node.get('path', False):\n            base_path = base_path + splitpath(node['path'])\n        node['pathComponents'] = base_path\n        # Recurse if this is a group.\n        if node['isa'] == 'PBXGroup':\n            for child in node['children']:\n                self.build_full_paths(child, base_path)\n        elif node['isa'] == 'PBXProject':\n            self.build_full_paths(node['mainGroup'], base_path)\n            self.build_full_paths(node['productRefGroup'], base_path)\n            for child in node['targets']:\n                self.build_full_paths(child, base_path)\n            projectRefs = node.get('projectReferences', None)\n            if projectRefs is not None:\n                for child in projectRefs[0].values():\n                    self.build_full_paths(child, base_path)\n\n    # Fix up any inconvenient keys.\n    #\n    def fix_keys(self, obj):\n        key_remappings = {'lastKnownFileType': 'fileType', 'explicitFileType': 'fileType'}\n        for key in list(set(key_remappings.keys()) & set(obj.keys())):\n            obj[key_remappings[key]] = obj[key]\n            del obj[key]\n\n    # Get the files from a build phase.\n    #\n    def get_build_phase_files(self, build_phase_name, filter_func):\n        build_phase = filter(lambda x: x['isa'] == build_phase_name, self.target['buildPhases'])[0]\n        build_files = filter(filter_func, build_phase['files'])\n        return [x['fileRef'] for x in build_files]\n\n    # Get the truncated paths of all headers that start with the specified\n    # relative path. Paths are read and returned as fully separated lists.\n    # e.g. ['Some', 'Path', 'To', 'A', 'Header'] with relative_path of\n    # ['Some', 'Path'] gets truncated to ['To', 'A', 'Header']\n    #\n    def movable_headers_relative_to(self, relative_path):\n        rel_path_length = len(relative_path)\n        result = filter(lambda path: len(path) >= rel_path_length and\n                                     path[:rel_path_length] == relative_path, self.header_paths)\n        return [path[rel_path_length:] for path in result]\n\n    # Get the full path to where a linkable archive (library or framework)\n    # is supposed to be.\n    #\n    def get_linked_archive_path(self, architecture):\n        return os.path.join(os.environ['OBJECT_FILE_DIR_%s' % os.environ['CURRENT_VARIANT']],\n                            architecture,\n                            os.environ['EXECUTABLE_NAME'])\n\n    # Get the full path to our custom linked archive of the project.\n    #\n    def get_linked_ufw_archive_path(self, architecture):\n        return self.get_linked_archive_path(architecture) + \".ufwbuild\"\n\n    # Get the full path to the executable of an archive.\n    #\n    def get_exe_path(self, node):\n        path = os.path.join(*node['pathComponents'])\n        if node['fileType'] == 'wrapper.framework':\n            # Frameworks are directories, so go one deeper\n            path = os.path.join(path, os.path.splitext(node['pathComponents'][-1])[0])\n        return path\n\n    # Get the path to the directory containing the archive.\n    #\n    def get_containing_path(self, node):\n        return os.path.join(*node['pathComponents'])\n    \n    def get_archive_search_paths(self):\n        log.info(\"Search paths = %s\" % set([self.get_containing_path(fw) for fw in self.static_frameworks] + [self.get_containing_path(fw) for fw in self.static_libraries]))\n        return set([self.get_containing_path(fw) for fw in self.static_frameworks] + [self.get_containing_path(fw) for fw in self.static_libraries])\n\n    # Command to link all objects of a single architecture.\n    #\n    def get_single_arch_link_command(self, architecture):\n        cmd = [self.libtool_path,\n               \"-static\",\n               \"-arch_only\", architecture,\n               \"-syslibroot\", os.environ['SDKROOT'],\n               \"-L%s\" % os.environ['TARGET_BUILD_DIR'],\n               \"-filelist\", os.environ['LINK_FILE_LIST_%s_%s' % (os.environ['CURRENT_VARIANT'], architecture)]]\n        if os.environ.get('OTHER_LDFLAGS', False):\n            cmd += [os.environ['OTHER_LDFLAGS']]\n        if os.environ.get('WARNING_LDFLAGS', False):\n            cmd += [os.environ['WARNING_LDFLAGS']]\n#        cmd += [\"-L%s\" % libpath for libpath in self.get_archive_search_paths()]\n        cmd += [self.get_exe_path(fw) for fw in self.static_frameworks]\n        cmd += [self.get_exe_path(lib) for lib in self.static_libraries]\n        cmd += [\"-o\", self.get_linked_ufw_archive_path(architecture)]\n        return cmd\n\n    # Command to link all local architectures for the current configuration\n    # into an archive. This reads all libraries + the UFW-built archives and\n    # overwrites the final product.\n    #\n    def get_local_archs_link_command(self):\n        cmd = [self.libtool_path,\n               \"-static\"]\n        cmd += self.local_linked_archive_paths\n        cmd += [self.get_exe_path(fw) for fw in self.static_frameworks]\n        cmd += [self.get_exe_path(lib) for lib in self.static_libraries]\n        cmd += [\"-o\", os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['EXECUTABLE_PATH'])]\n        return cmd\n\n    # Command to link all architectures into a universal archive.\n    # This reads all UFW-built archives and overwrites the final product.\n    #\n    def get_all_archs_link_command(self):\n        cmd = [self.libtool_path,\n               \"-static\"]\n        cmd += self.local_linked_archive_paths + self.build_state.slave_linked_archive_paths\n        cmd += [\"-o\", os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['EXECUTABLE_PATH'])]\n        return cmd\n\n    # Build up an environment for the slave process. This uses BUILD_ROOT\n    # and TEMP_ROOT to convert all environment variables to values suitable\n    # for the slave build environment so that xcodebuild doesn't try to build\n    # in the project directory under \"build\".\n    #\n    def get_slave_environment(self):\n        ignored = ['LD_MAP_FILE_PATH',\n        'HEADER_SEARCH_PATHS',\n        'LIBRARY_SEARCH_PATHS',\n        'FRAMEWORK_SEARCH_PATHS']\n        build_root = os.environ['BUILD_ROOT']\n        temp_root = os.environ['TEMP_ROOT']\n        newenv = {}\n        for key, value in os.environ.items():\n            if key not in ignored and not key.startswith('LINK_FILE_LIST_') and not key.startswith('LD_DEPENDENCY_'):\n                if build_root in value or temp_root in value:\n                    newenv[key] = value.replace(self.local_platform, self.other_platform)\n        return newenv\n\n    # Command to invoke xcodebuild on the slave platform.\n    #\n    def get_slave_project_build_command(self):\n        cmd = [\"xcodebuild\",\n               \"-project\",\n               os.environ['PROJECT_FILE_PATH'],\n               \"-target\",\n               os.environ['TARGET_NAME'],\n               \"-configuration\",\n               os.environ['CONFIGURATION'],\n               \"-sdk\",\n               self.other_platform + self.sdk_version]\n        cmd += [\"%s=%s\" % (key, value) for key, value in self.get_slave_environment().items()]\n        cmd += [\"UFW_MASTER_PLATFORM=\" + os.environ['PLATFORM_NAME']]\n        cmd += [os.environ['ACTION']]\n        return cmd\n\n\n\n##############################################################################\n#\n# Utility Functions\n#\n##############################################################################\n\n# Split a path into a list of path components.\n#\ndef splitpath(path, maxdepth=20):\n     (head, tail) = os.path.split(path)\n     return splitpath(head, maxdepth - 1) + [tail] if maxdepth and head and head != path else [ head or tail ]\n\n# Remove all subdirectories under a path.\n#\ndef remove_subdirs(path, ignore_files):\n    if os.path.exists(path):\n        for filename in filter(lambda x: x not in ignore_files, os.listdir(path)):\n            fullpath = os.path.join(path, filename)\n            if os.path.isdir(fullpath):\n                log.info(\"Remove %s\" % fullpath)\n                shutil.rmtree(fullpath)\n\n# Make whatever parent paths are necessary for a path to exist.\n#\ndef ensure_path_exists(path):\n    if not os.path.isdir(path):\n        os.makedirs(path)\n\n# Make whatever parent paths are necessary for a path's parent to exist.\n#\ndef ensure_parent_exists(path):\n    parent = os.path.dirname(path)\n    if not os.path.isdir(parent):\n        os.makedirs(parent)\n\n# Remove a file or dir if it exists.\n#\ndef remove_path(path):\n    if os.path.exists(path):\n        if os.path.isdir(path) and not os.path.islink(path):\n            shutil.rmtree(path)\n        else:\n            os.remove(path)\n\n# Move a file or dir, replacing the destination if it exists.\n#\ndef move_file(src, dst):\n    if src == dst or not os.path.isfile(src):\n        return\n    log.info(\"Move %s to %s\" % (src, dst))\n    ensure_parent_exists(dst)\n    remove_path(dst)\n    shutil.move(src, dst)\n\n# Copy a file or dir, replacing the destination if it exists already.\n#\ndef copy_overwrite(src, dst):\n    if src != dst:\n        remove_path(dst)\n        ensure_parent_exists(dst)\n        shutil.copytree(src, dst, symlinks=True)\n\n# Attempt to symlink link_path -> link_to.\n# link_to must be a path relative to link_path's parent and must exist.\n# If link_path already exists, do nothing.\n#\ndef attempt_symlink(link_path, link_to):\n    # Only allow linking to an existing file\n    os.stat(os.path.abspath(os.path.join(link_path, \"..\", link_to)))\n\n    # Only make the link if it hasn't already been made\n    if not os.path.exists(link_path):\n        log.info(\"Symlink %s -> %s\" % (link_path, link_to))\n        os.symlink(link_to, link_path)\n\n# Takes the last entry in an array-based path and returns a normal path\n# relative to base_path.\n#\ndef top_level_file_path(base_path, path_list):\n    return os.path.join(base_path, os.path.split(path_list[-1])[-1])\n\n# Takes all entries in an array-based path and returns a normal path\n# relative to base_path.\n#\ndef full_file_path(base_path, path_list):\n    return os.path.join(*([base_path] + path_list))\n\n# Print a command before executing it.\n# Also print out all output from the command to STDOUT.\n#\ndef print_and_call(cmd):\n    log.info(\"Cmd \" + \" \".join(cmd))\n    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)\n    result = p.communicate()[0]\n    if len(result) > 0:\n        log.info(result)\n    if p.returncode != 0:\n        raise subprocess.CalledProcessError(p.returncode, cmd)\n\n# Special print-and-call command for the slave build that strips out\n# xcodebuild's spammy list of environment variables.\n#\ndef print_and_call_slave_build(cmd, other_platform):\n    separator = '=== BUILD NATIVE TARGET '\n    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)\n    result = p.communicate()[0].split(separator)\n    if len(result) == 1:\n        result = result[0]\n    else:\n        result = separator + result[1]\n    log.info(\"Cmd \" + \" \".join(cmd) + \"\\n\" + result)\n    if p.returncode != 0:\n        raise subprocess.CalledProcessError(p.returncode, cmd)\n\n# Issue a warning and record that a warning has been issued.\n#\ndef issue_warning(msg, *args, **kwargs):\n    global issued_warnings\n    issued_warnings = True\n    log.warn(msg, *args, **kwargs)\n\n\n\n##############################################################################\n#\n# Main Application\n#\n##############################################################################\n\n# Check if we are running as master.\n#\ndef is_master():\n    return os.environ.get('UFW_MASTER_PLATFORM', os.environ['PLATFORM_NAME']) == os.environ['PLATFORM_NAME']\n\n# DerivedData should almost never appear in any framework, library, or header\n# search paths. However, Xcode will sometimes add them in, so we check to make\n# sure.\n#\ndef check_for_derived_data_in_search_paths(project):\n    search_path_keys = [\"FRAMEWORK_SEARCH_PATHS\", \"LIBRARY_SEARCH_PATHS\", \"HEADER_SEARCH_PATHS\"]\n    build_configs = project.target['buildConfigurationList']['buildConfigurations']\n    build_settings = filter(lambda x: x['name'] == os.environ['CONFIGURATION'], build_configs)[0]['buildSettings']\n    \n    found_something = False\n    for path_key in filter(lambda x: x in build_settings, search_path_keys):\n        path = build_settings[path_key]\n        if \"DerivedData\" in path:\n            found_something = True\n            log.warn(\"Derived data in %s\" % path)\n            issue_warning(\"'%s' contains reference to 'DerivedData'.\" % path_key)\n    if found_something:\n        log.warn(\"Check your build settings and remove any entries that contain paths inside the DerivedData folder.\")\n        log.warn(\"Otherwise you can disable this warning by changing 'config_warn_derived_data' in this script.\")\n\n# Link local architectures into their respective archives.\n#\ndef link_local_archs(project):\n    for arch in project.local_architectures:\n        print_and_call(project.get_single_arch_link_command(arch))\n\n# Link only the local architectures into the final product, not the slave\n# architectures. For iphoneos, this will be armv6, armv7. For simulator, this\n# will be i386.\n#\ndef link_combine_local_archs(project):\n    print_and_call(project.get_local_archs_link_command())\n\n# Link all architectures into the final product.\n#\ndef link_combine_all_archs(project):\n    print_and_call(project.get_all_archs_link_command())\n\n# Check if we should open the build directory after a successful build.\n#\ndef should_open_build_dir():\n    env_setting = os.environ.get('UFW_OPEN_BUILD_DIR', None)\n    if env_setting is not None:\n        return env_setting\n\n    return config_open_build_dir\n\n# Open the build dir in Finder.\n#\ndef open_build_dir():\n    print_and_call(['open', os.environ['TARGET_BUILD_DIR']])\n\n# Check if the build was started by selecting \"Archive\" under \"Product\" in\n# Xcode.\n#\ndef is_archive_build():\n    # ACTION is always 'build', but perhaps Apple will fix this someday?\n    archive_build = os.environ['ACTION'] == 'archive'\n\n    if not archive_build:\n        # This can be passed in as an env variable when building from command line.\n        archive_build = os.environ.get('UFW_ACTION', None) == 'archive'\n\n    build_dir = splitpath(os.environ['BUILD_DIR'])\n    if not archive_build:\n        # This partial path is used when you select \"archive\" from within Xcode.\n        archive_build = 'ArchiveIntermediates' in build_dir\n\n    # It only counts as a full archive build if this target is being built into\n    # its own build dir (not being built as a dependency of another target)\n    if archive_build:\n        archive_build = os.environ['TARGET_NAME'] in build_dir\n    \n    return archive_build\n\n# Xcode by default throws all public headers into the top level directory.\n# This function moves them to their expected deep hierarchy.\n#\ndef build_deep_header_hierarchy(project):\n    header_path_top = config_deep_header_top\n    if not header_path_top:\n        header_path_top = os.path.commonprefix(project.header_paths)\n    else:\n        header_path_top = splitpath(header_path_top)\n\n    built_headers_path = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['PUBLIC_HEADERS_FOLDER_PATH'])\n    movable_headers = project.movable_headers_relative_to(header_path_top)\n\n    # Remove subdirs if they only contain files that have been rebuilt\n    ignore_headers = filter(lambda x: not os.path.isfile(top_level_file_path(built_headers_path, x)), movable_headers)\n    remove_subdirs(built_headers_path, [file[0] for file in ignore_headers])\n\n    # Move rebuilt headers into their proper subdirs\n    for header in movable_headers:\n        move_file(top_level_file_path(built_headers_path, header), full_file_path(built_headers_path, header))\n\n# Add all symlinks needed to make a full framework structure:\n#\n# MyFramework.framework\n# |-- MyFramework -> Versions/Current/MyFramework\n# |-- Headers -> Versions/Current/Headers\n# |-- Resources -> Versions/Current/Resources\n# `-- Versions\n#     |-- A\n#     |   |-- MyFramework\n#     |   |-- Headers\n#     |   |   `-- MyFramework.h\n#     |   `-- Resources\n#     |       |-- Info.plist\n#     |       |-- MyViewController.nib\n#     |       `-- en.lproj\n#     |           `-- InfoPlist.strings\n#     `-- Current -> A\n#\ndef add_symlinks_to_framework(project):\n    base_dir = project.local_built_fw_path\n    attempt_symlink(os.path.join(base_dir, \"Versions\", \"Current\"), os.environ['FRAMEWORK_VERSION'])\n    if os.path.isdir(os.path.join(base_dir, \"Versions\", \"Current\", \"Headers\")):\n        attempt_symlink(os.path.join(base_dir, \"Headers\"), os.path.join(\"Versions\", \"Current\", \"Headers\"))\n    if os.path.isdir(os.path.join(base_dir, \"Versions\", \"Current\", \"Resources\")):\n        attempt_symlink(os.path.join(base_dir, \"Resources\"), os.path.join(\"Versions\", \"Current\", \"Resources\"))\n    attempt_symlink(os.path.join(base_dir, os.environ['EXECUTABLE_NAME']), os.path.join(\"Versions\", \"Current\", os.environ['EXECUTABLE_NAME']))\n\n# Build an embedded framework structure.\n# An embedded framework contains the actual framework, plus a \"Resources\"\n# directory containing symlinks to all resources found in the actual framework,\n# with the exception of \"Info.plist\" and anything ending in \".lproj\":\n#\n# MyFramework.embeddedframework\n# |-- MyFramework.framework\n# |   |-- MyFramework -> Versions/Current/MyFramework\n# |   |-- Headers -> Versions/Current/Headers\n# |   |-- Resources -> Versions/Current/Resources\n# |   `-- Versions\n# |       |-- A\n# |       |   |-- MyFramework\n# |       |   |-- Headers\n# |       |   |   `-- MyFramework.h\n# |       |   `-- Resources\n# |       |       |-- Info.plist\n# |       |       |-- MyViewController.nib\n# |       |       `-- en.lproj\n# |       |           `-- InfoPlist.strings\n# |       `-- Current -> A\n# `-- Resources\n#     `-- MyViewController.nib -> ../MyFramework.framework/Resources/MyViewController.nib\n#\ndef build_embedded_framework(project):\n    fw_path = project.local_built_fw_path\n    embedded_path = project.local_built_embedded_fw_path\n    fw_name = os.environ['WRAPPER_NAME']\n\n    if (os.path.islink(fw_path)):\n        # If the framework path is a link, the build result already in embeddedframework.\n        # Just recreate embeddedframework's Resources\n        remove_path(os.path.join(embedded_path, \"Resources\"))\n    else:\n        remove_path(embedded_path)\n        ensure_path_exists(embedded_path)\n        copy_overwrite(fw_path, os.path.join(embedded_path, fw_name))\n\n    # Create embeddedframework's Resources        \n    ensure_path_exists(os.path.join(embedded_path, \"Resources\"))\n    symlink_source = os.path.join(\"..\", fw_name, \"Resources\")\n    symlink_path = os.path.join(embedded_path, \"Resources\")\n    if os.path.isdir(os.path.join(fw_path, \"Resources\")):\n        for file in filter(lambda x: x != \"Info.plist\" and not x.endswith(\".lproj\"), os.listdir(os.path.join(fw_path, \"Resources\"))):\n            attempt_symlink(os.path.join(symlink_path, file), os.path.join(symlink_source, file))\n\n    # Remove the normal framework and replace it with a symlink to the copy\n    # in the embedded framework. This is needed because Xcode runs its strip\n    # phase AFTER the script runs.\n    embed_fw_wrapper = os.path.splitext(os.environ['WRAPPER_NAME'])[0] + \".embeddedframework\"\n    remove_path(fw_path)\n    attempt_symlink(fw_path, os.path.join(embed_fw_wrapper, os.environ['WRAPPER_NAME']))\n\n\n# Run the build process in slave mode to build the other configuration\n# (device/simulator).\n#\ndef run_slave_build(project):\n    print_and_call_slave_build(project.get_slave_project_build_command(), project.other_platform)\n\n# Run the build process.\n#\ndef run_build():\n    project = Project(os.path.join(os.environ['PROJECT_FILE_PATH'], \"project.pbxproj\"))\n\n    # Issue warnings only if we're master.\n    if is_master():\n        if len(project.compilable_sources) == 0:\n            raise Exception(\"No compilable sources found. Please add at least one source file to build target %s.\" % os.environ['TARGET_NAME'])\n\n        if config_warn_derived_data:\n            check_for_derived_data_in_search_paths(project)\n        if config_warn_no_public_headers and len(project.public_headers) == 0:\n            issue_warning('No headers in build target %s were marked public. Please move at least one header to \"Public\" in the \"Copy Headers\" build phase.' % os.environ['TARGET_NAME'])\n\n    # Only build slave if this is an archive build.\n    if is_archive_build():\n        if is_master():\n            log.debug(\"Building as MASTER\")\n            # The slave-side linker tries to include this (nonexistent) path as\n            # a library path.\n            ensure_path_exists(project.get_slave_environment()['BUILT_PRODUCTS_DIR'])\n            project.build_state.persist()\n            run_slave_build(project)\n            project.build_state.reload()\n        else:\n            log.debug(\"Building as SLAVE\")\n            project.build_state.reload()\n            project.build_state.set_slave_properties(project.local_architectures,\n                                                     project.local_linked_archive_paths,\n                                                     project.local_built_fw_path,\n                                                     project.local_built_embedded_fw_path)\n            project.build_state.persist()\n\n    link_local_archs(project)\n    \n    # Only do a universal binary when building an archive.\n    if is_archive_build() and is_master():\n        link_combine_all_archs(project)\n    else:\n        link_combine_local_archs(project)\n\n    if config_deep_header_hierarchy:\n        build_deep_header_hierarchy(project)\n\n    add_symlinks_to_framework(project)\n    \n    if is_master():\n        if config_framework_type == 'embeddedframework':\n            build_embedded_framework(project)\n        elif config_framework_type != 'framework':\n            raise Exception(\"%s: Unknown framework type for config_framework_type\" % config_framework_type)\n\n\nif __name__ == \"__main__\":\n    log_handler = logging.StreamHandler()\n    log_handler.setFormatter(logging.Formatter(\"%(name)s (\" + os.environ['PLATFORM_NAME'] + \"): %(levelname)s: %(message)s\"))\n    log.addHandler(log_handler)\n    log.setLevel(config_log_level)\n\n    error_code = 0\n    prefix = \"M\" if is_master() else \"S\"\n    log_handler.setFormatter(logging.Formatter(\"%(name)s (\" + prefix + \" \" + os.environ['PLATFORM_NAME'] + \"): %(levelname)s: %(message)s\"))\n\n    log.debug(\"Begin build process\")\n\n    if config_deep_header_top:\n        config_deep_header_top = string.Template(config_deep_header_top).substitute(os.environ)\n\n    try:\n        run_build()\n        if issued_warnings:\n            if config_fail_on_warnings:\n                error_code = 1\n            log.warn(\"Build completed with warnings\")\n        else:\n            log.info(\"Build completed\")\n        if not is_archive_build():\n            log.info(\"Note: This is *NOT* a universal framework build. To build as a universal framework, do an archive build.\")\n            log.info(\"To do an archive build from command line, use \\\"xcodebuild -configuration Release UFW_ACTION=archive clean build\\\"\")\n    except Exception:\n        traceback.print_exc(file=sys.stdout)\n        error_code = 1\n        log.error(\"Build failed\")\n    finally:\n        if error_code == 0 and is_archive_build() and is_master():\n            log.info(\"Built framework is in \" + os.environ['TARGET_BUILD_DIR'])\n            if should_open_build_dir():\n                open_build_dir()\n        sys.exit(error_code)\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E0678D819178855005DC8CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E11BF0C19178CA90038B9A7 /* TorManager.m in Sources */,
+				4E11C1E019179A200038B9A7 /* TorWrapper.m in Sources */,
+				4E11BF1019178CD60038B9A7 /* TorURLProtocol.m in Sources */,
+				4ED21BA9191B702A00FBF84B /* CKHTTPConnection.m in Sources */,
+				4ED21BAD191B722100FBF84B /* NSData+Gzip.m in Sources */,
+				4E11C25A1917D97C0038B9A7 /* tor_main.c in Sources */,
+				4EAC3E2F191B9BF6001CDCAD /* ULINetSocket.m in Sources */,
+				4EAC3DFE191B9B9F001CDCAD /* ASIS3Bucket.m in Sources */,
+				4EAC3DD9191B9B9F001CDCAD /* ASIAuthenticationDialog.m in Sources */,
+				4EAC3E08191B9B9F001CDCAD /* ASIS3ServiceRequest.m in Sources */,
+				4EAC3DF9191B9B9F001CDCAD /* ASICloudFilesObjectRequest.m in Sources */,
+				4EAC3DDC191B9B9F001CDCAD /* ASIDataCompressor.m in Sources */,
+				4EAC3DF7191B9B9F001CDCAD /* ASICloudFilesObject.m in Sources */,
+				4EAC3DF1191B9B9F001CDCAD /* ASICloudFilesContainer.m in Sources */,
+				4EAC3DF3191B9B9F001CDCAD /* ASICloudFilesContainerRequest.m in Sources */,
+				4EAC3E04191B9B9F001CDCAD /* ASIS3ObjectRequest.m in Sources */,
+				4EAC3DE8191B9B9F001CDCAD /* ASIInputStream.m in Sources */,
+				4EAC3E06191B9B9F001CDCAD /* ASIS3Request.m in Sources */,
+				4EAC3DE4191B9B9F001CDCAD /* ASIHTTPRequest.m in Sources */,
+				4EAC3E00191B9B9F001CDCAD /* ASIS3BucketObject.m in Sources */,
+				4EAC3DE2191B9B9F001CDCAD /* ASIFormDataRequest.m in Sources */,
+				4EAC3DE0191B9B9F001CDCAD /* ASIDownloadCache.m in Sources */,
+				4EAC3DFB191B9B9F001CDCAD /* ASICloudFilesRequest.m in Sources */,
+				4EAC3DEF191B9B9F001CDCAD /* ASICloudFilesCDNRequest.m in Sources */,
+				4EAC3DF5191B9B9F001CDCAD /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
+				4EAC3DDE191B9B9F001CDCAD /* ASIDataDecompressor.m in Sources */,
+				4EAC3DEA191B9B9F001CDCAD /* ASINetworkQueue.m in Sources */,
+				4EAC3DED191B9B9F001CDCAD /* ASIWebPageRequest.m in Sources */,
+				4EAC3E02191B9B9F001CDCAD /* ASIS3BucketRequest.m in Sources */,
+				4EAC3E2A191B9BC8001CDCAD /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E0678ED19178855005DC8CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E06790319178855005DC8CA /* iOS_TorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E0678F819178855005DC8CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E0678DD19178855005DC8CA /* iOS-Tor */;
+			targetProxy = 4E0678F719178855005DC8CA /* PBXContainerItemProxy */;
+		};
+		4E0678FA19178855005DC8CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E0678DD19178855005DC8CA /* iOS-Tor */;
+			targetProxy = 4E0678F919178855005DC8CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4E0678E619178855005DC8CA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E0678E719178855005DC8CA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4E0678FF19178855005DC8CA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E06790019178855005DC8CA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E06790419178855005DC8CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4E06790519178855005DC8CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E06790719178855005DC8CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					x86_64,
+				);
+				DEAD_CODE_STRIPPING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS-Tor/iOS-Tor-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${SDK_DIR}/usr/include/libxml2",
+					"$(SRCROOT)/../dependencies/include",
+					"$(SRCROOT)/../dependencies/include/or",
+					"$(SRCROOT)/../dependencies/include/common",
+				);
+				INFOPLIST_FILE = "iOS-Tor/iOS-Tor-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../dependencies/lib\"",
+				);
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		4E06790819178855005DC8CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					x86_64,
+				);
+				DEAD_CODE_STRIPPING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS-Tor/iOS-Tor-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${SDK_DIR}/usr/include/libxml2",
+					"$(SRCROOT)/../dependencies/include",
+					"$(SRCROOT)/../dependencies/include/or",
+					"$(SRCROOT)/../dependencies/include/common",
+				);
+				INFOPLIST_FILE = "iOS-Tor/iOS-Tor-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../dependencies/lib\"",
+				);
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		4E06790A19178855005DC8CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOS-Tor.framework/Versions/A/iOS-Tor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS-Tor/iOS-Tor-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iOS-TorTests/iOS-TorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4E06790B19178855005DC8CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOS-Tor.framework/Versions/A/iOS-Tor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS-Tor/iOS-Tor-Prefix.pch";
+				INFOPLIST_FILE = "iOS-TorTests/iOS-TorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E0678D719178854005DC8CA /* Build configuration list for PBXProject "iOS-Tor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E06790419178855005DC8CA /* Debug */,
+				4E06790519178855005DC8CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E06790619178855005DC8CA /* Build configuration list for PBXNativeTarget "iOS-Tor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E06790719178855005DC8CA /* Debug */,
+				4E06790819178855005DC8CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E06790919178855005DC8CA /* Build configuration list for PBXNativeTarget "iOS-TorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E06790A19178855005DC8CA /* Debug */,
+				4E06790B19178855005DC8CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E0678D419178854005DC8CA /* Project object */;
+}

@@ -4,3 +4,9 @@
 [submodule "ASIHTTPRequest"]
 	path = ASIHTTPRequest
 	url = https://github.com/pokeb/asi-http-request.git
+[submodule "iOS-Tor/ASIHTTPRequest"]
+	path = iOS-Tor/ASIHTTPRequest
+	url = https://github.com/pokeb/asi-http-request.git
+[submodule "iOS-Tor/ULINetSocket"]
+	path = iOS-Tor/ULINetSocket
+	url = https://github.com/uliwitness/ULINetSocket.git
