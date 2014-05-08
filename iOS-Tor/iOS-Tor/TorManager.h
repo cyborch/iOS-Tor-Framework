@@ -25,6 +25,8 @@ enum {
 + (TorManager *)defaultManager;
 
 - (void)startTor;
+- (void)stopTor;
+
 - (void)hupTor;
 
 - (void)requestNewTorIdentity;

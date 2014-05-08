@@ -9,7 +9,6 @@
 #import "TorURLProtocol.h"
 #import <UIKit/UIKit.h>
 #import <Foundation/NSURLProtocol.h>
-//#import "AppDelegate.h"
 #import "NSData+Gzip.h"
 
 

@@ -67,7 +67,7 @@ connectionStatus = _connectionStatus
 
 -(id)init {
     if (self=[super init]) {
-        [NSURLProtocol registerClass:[TorURLProtocol class]];
+        
         
         _torControlPort = (arc4random() % (57343-49153)) + 49153;
         _torSocksPort = (arc4random() % (65534-57344)) + 57344;
@@ -100,6 +100,7 @@ connectionStatus = _connectionStatus
 
 -(void)startTor {
     // Starts or restarts tor thread.
+    [NSURLProtocol registerClass:[TorURLProtocol class]];
     
     if (_torCheckLoopTimer != nil) {
         [_torCheckLoopTimer invalidate];
@@ -120,6 +121,19 @@ connectionStatus = _connectionStatus
                                                         selector:@selector(activateTorCheckLoop)
                                                         userInfo:nil
                                                          repeats:NO];
+}
+
+- (void) stopTor {
+    [self disableTorCheckLoop];
+    if (_torStatusTimeoutTimer != nil) {
+        [_torStatusTimeoutTimer invalidate];
+    }
+    if (_torThread != nil) {
+        [_torThread cancel];
+        _torThread = nil;
+    }
+    
+    [NSURLProtocol unregisterClass:[TorURLProtocol class]];
 }
 
 - (void)hupTor {
