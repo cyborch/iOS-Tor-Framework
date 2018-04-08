@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   s.vendored_libraries = "dependencies/lib/*.a"
 
   s.xcconfig = { 
-    "HEADER_SEARCH_PATHS" => ["$(SDKROOT)/usr/include/libxml2", "$(SRCROOT)/../dependencies/include"],
+    "OTHER_CFLAGS" => "-I$(SDKROOT)/usr/include/libxml2 -I$(SRCROOT)/../dependencies/include",
     "OTHER_LDFLAGS" => "-L$(SRCROOT)/../dependencies/lib"
   }
 
