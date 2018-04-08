@@ -34,6 +34,7 @@ Pod::Spec.new do |s|
   s.frameworks = "MobileCoreServices", "SystemConfiguration", "Foundation", "CFNetwork"
   s.libraries = "xml2", "crypto", "curve25519_donna", "event_core", "event_extra", "event_pthreads", "event", "or-crypto", "or-event", "or", "ssl", "tor", "z"
 
+  s.preserve_paths = "dependencies/**/*"
 
   s.xcconfig = { 
     "HEADER_SEARCH_PATHS" => ["$(SDKROOT)/usr/include/libxml2", "$(SRCROOT)/../dependencies/include"],
