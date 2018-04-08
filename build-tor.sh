@@ -280,7 +280,7 @@ done
 
 mkdir -p ${OUTPUTDIR}/share
 cp "${SRCDIR}/tor-${VERSION}/src/config/geoip" ${OUTPUTDIR}/share
-cp "${SRCDIR}/tor-${VERSION}/src/config/torrc.in" ${OUTPUTDIR}/share/torrc
+cp "${SRCDIR}/tor-${VERSION}/src/config/torrc.sample.in" ${OUTPUTDIR}/share/torrc
 patch -p3 ${OUTPUTDIR}/share/torrc < ../../../build-patches/torrc.diff
 
 ####################
