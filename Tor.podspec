@@ -27,6 +27,7 @@ Pod::Spec.new do |s|
   end
 
   s.source_files  = "iOS-Tor/iOS-Tor/**/*.{h,m,c}"
+  s.private_header_files = "iOS-Tor/iOS-Tor/**/*.h"
   s.public_header_files = "iOS-Tor/iOS-Tor/Tor*.h"
 
   s.resources = "dependencies/share/*"
