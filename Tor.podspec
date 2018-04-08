@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Tor"
-  s.version      = "0.2.4.21"
+  s.version      = "0.2.4-21"
   s.summary      = "Tor framework for iOS"
 
   s.description  = <<-DESC
