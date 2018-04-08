@@ -24,8 +24,8 @@
 #
 VERSION="0.2.4.21"
 #VERSION="0.2.5.2-alpha"
-USERSDKVERSION="7.1"
-MINIOSVERSION="6.0"
+USERSDKVERSION=`xcrun -sdk iphoneos --show-sdk-platform-version`
+MINIOSVERSION="10.0"
 VERIFYGPG=true
 
 ###########################################################################
@@ -36,7 +36,7 @@ VERIFYGPG=true
 
 # No need to change this since xcode build will only compile in the
 # necessary bits from the libraries we create
-ARCHS="i386 x86_64 armv7 armv7s arm64"
+ARCHS="x86_64 armv7 armv7s arm64"
 
 DEVELOPER=`xcode-select -print-path`
 #DEVELOPER="/Applications/Xcode.app/Contents/Developer"
@@ -84,8 +84,8 @@ set -e
 
 if [ ! -e "${SRCDIR}/tor-${VERSION}.tar.gz" ]; then
 	echo "Downloading tor-${VERSION}.tar.gz"
-	#curl -O https://archive.torproject.org/tor-package-archive/tor-${VERSION}.tar.gz
-	curl -O https://www.torproject.org/dist/tor-${VERSION}.tar.gz
+	curl -O https://archive.torproject.org/tor-package-archive/tor-${VERSION}.tar.gz
+	# curl -O https://www.torproject.org/dist/tor-${VERSION}.tar.gz
 fi
 echo "Using tor-${VERSION}.tar.gz"
 
@@ -122,20 +122,26 @@ patch -p3 < ../../../build-patches/tor-ptrace.diff
 # being undefined)
 patch -p3 < ../../../build-patches/tor-nsenviron.diff
 
+# Patch to add stdlib.h to TOR_SEARCH_LIBRARY
+patch -p3 configure.ac < ../../../build-patches/tor-configure.diff
+autoconf
+
 #####
 # Collect libz.dylib from the iPhoneSimulator.sdk and iPhoneOS.sdk (already contains armv6 and armv7)
 # and compile into a single libz.a file (since that is what tor is looking for)
 
-lipo -create ${DEVELOPER}/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDKVERSION}.sdk/usr/lib/libz.dylib \
-${DEVELOPER}/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${SDKVERSION}.sdk/usr/lib/libz.dylib \
--output ${OUTPUTDIR}/lib/libz.a
+# lipo -create ${DEVELOPER}/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDKVERSION}.sdk/usr/lib/libz.dylib \
+# ${DEVELOPER}/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${SDKVERSION}.sdk/usr/lib/libz.dylib \
+# -output ${OUTPUTDIR}/lib/libz.a
 
 cp -R ${DEVELOPER}/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDKVERSION}.sdk/usr/include/zlib* ${OUTPUTDIR}/include/
 
 # Copy ptrace in (since the header is only available on iPhoneSimulator.sdk
 # but the compile steps still need it for iPhoneOS)
 mkdir -p ${OUTPUTDIR}/include/sys/
-cp -R ${DEVELOPER}/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDKVERSION}.sdk/usr/include/sys/ptrace.h ${OUTPUTDIR}/include/sys/
+
+cp -R ${DEVELOPER}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/ptrace.h ${OUTPUTDIR}/include/sys/
+# cp -R ${DEVELOPER}/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDKVERSION}.sdk/usr/include/sys/ptrace.h ${OUTPUTDIR}/include/sys/
 
 #####
 # Now compile tor
@@ -165,7 +171,7 @@ for ARCH in ${ARCHS}
 do
 	if [ "${ARCH}" == "i386" ] || [ "${ARCH}" == "x86_64" ]; then
 		PLATFORM="iPhoneSimulator"
-		 EXTRA_CONFIG=""
+		 EXTRA_CONFIG="--host=x86_64"
 	else
 		PLATFORM="iPhoneOS"
 		EXTRA_CONFIG="--host=arm-apple-darwin13 --target=arm-apple-darwin13 --disable-gcc-hardening --disable-linker-hardening"
@@ -274,6 +280,8 @@ done
 
 mkdir -p ${OUTPUTDIR}/share
 cp "${SRCDIR}/tor-${VERSION}/src/config/geoip" ${OUTPUTDIR}/share
+cp "${SRCDIR}/tor-${VERSION}/src/config/torrc.in" ${OUTPUTDIR}/share/torrc
+patch -p3 ${OUTPUTDIR}/share/torrc < ../../../build-patches/torrc.diff
 
 ####################
 
@@ -281,8 +289,6 @@ echo "Building done."
 echo "Cleaning up..."
 # Remove the copy of libz we created. (Our XCode project will use the system
 # version.) Ditto with sys/pthread.h.
-rm -f ${OUTPUTDIR}/lib/libz.a
-rm -f ${OUTPUTDIR}/include/zlib*
 rm -fr ${OUTPUTDIR}/include/sys/
 
 # Remove intermediary and source directories

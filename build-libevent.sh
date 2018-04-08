@@ -23,8 +23,8 @@
 # Choose your libevent version and your currently-installed iOS SDK version:
 #
 VERSION="2.0.21-stable"
-USERSDKVERSION="7.1"
-MINIOSVERSION="6.0"
+USERSDKVERSION=`xcrun -sdk iphoneos --show-sdk-platform-version`
+MINIOSVERSION="10.0"
 VERIFYGPG=true
 
 ###########################################################################
@@ -141,7 +141,8 @@ do
 	--prefix="${INTERDIR}/${PLATFORM}${SDKVERSION}-${ARCH}.sdk" \
 	LDFLAGS="$LDFLAGS -L${OUTPUTDIR}/lib" \
 	CFLAGS="$CFLAGS -O2 -I${OUTPUTDIR}/include -isysroot ${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer/SDKs/${PLATFORM}${SDKVERSION}.sdk" \
-	CPPFLAGS="$CPPFLAGS -I${OUTPUTDIR}/include -isysroot ${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer/SDKs/${PLATFORM}${SDKVERSION}.sdk"
+	CPPFLAGS="$CPPFLAGS -I${OUTPUTDIR}/include -isysroot ${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer/SDKs/${PLATFORM}${SDKVERSION}.sdk" \
+  --host=arm
 
 	# Build the application and install it to the fake SDK intermediary dir
 	# we have set up. Make sure to clean up afterward because we will re-use

@@ -16,9 +16,11 @@ Build
 
 	`cd iOS-Tor-Framework/`
 	
-	`git submodule update --recursive`
+	`git submodule update --init --recursive`
 
-4. Build libssl, libevent & libtor for iOS
+4. Build libz, libssl, libevent & libtor for iOS
+
+	`./build-libz.sh`
 
 	`./build-libssl.sh --noverify`
 	
@@ -30,23 +32,21 @@ Build
 
 	`cd iOS-Tor`
 	
-	`xcodebuild`
+	`xcodebuild -sdk iphoneos`
 
 6. Copy the framework on your desktop (or where you like)
 
-	`cp -R ./build/Release-iphoneos/iOS-Tor.framework ~/Desktop/`
+	`cp -R ./build/Release-iphoneos/Tor.framework ~/Desktop/`
     
     
 Install
 -------
 
-Add the iOS-Tor framework to your project
+Add the Tor framework to your project
 
-also add `geoip` and `torrc` files and make sure they are in the 'Copy Bundle Resources'
+Import the TorManager from Tor framework
 
-Import the TorManager from iOS-Tor framework
-
-	#import <iOS-Tor/TorManager.h>
+	#import <Tor/TorManager.h>
 
 Start TorManager
 

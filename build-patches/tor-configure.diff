@@ -1,0 +1,18 @@
+--- configure.ac.orig	2018-04-08 09:46:05.000000000 +0200
++++ configure.ac	2018-04-08 09:46:16.000000000 +0200
+@@ -507,6 +507,7 @@
+ 
+ TOR_SEARCH_LIBRARY(openssl, $tryssldir, [-lssl -lcrypto $TOR_LIB_GDI],
+     [#include <openssl/rand.h>],
++    [#include <stdlib.h>],
+     [void RAND_add(const void *buf, int num, double entropy);],
+     [RAND_add((void*)0,0,0); exit(0);], [],
+     [/usr/local/openssl /usr/lib/openssl /usr/local/ssl /usr/lib/ssl /usr/local /usr/athena /opt/openssl])
+@@ -534,6 +535,7 @@
+ 
+ TOR_SEARCH_LIBRARY(zlib, $tryzlibdir, [-lz],
+     [#include <zlib.h>],
++    [#include <stdlib.h>],
+     [const char * zlibVersion(void);],
+     [zlibVersion(); exit(0);], [--with-zlib-dir],
+     [/opt/zlib])

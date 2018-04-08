@@ -1,0 +1,10 @@
+--- torrc.orig	2018-04-08 10:04:32.000000000 +0200
++++ torrc	2018-04-08 10:08:29.000000000 +0200
+@@ -17,6 +17,7 @@
+ ## as a relay, and not make any local application connections yourself.
+ #SocksPort 9050 # Default: Bind to localhost:9050 for local connections.
+ #SocksPort 192.168.0.1:9100 # Bind to this address:port too.
++SocksPort 0
+ 
+ ## Entry policies to allow/deny SOCKS requests based on IP address.
+ ## First entry that matches wins. If no SocksPolicy is set, we accept
