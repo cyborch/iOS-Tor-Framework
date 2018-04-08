@@ -36,6 +36,7 @@ Pod::Spec.new do |s|
   s.libraries = "xml2", "crypto", "curve25519_donna", "event_core", "event_extra", "event_pthreads", "event", "or-crypto", "or-event", "or", "ssl", "tor", "z"
 
   s.preserve_paths = "dependencies/**/*"
+  s.vendored_libraries = "dependencies/lib/*.a"
 
   s.xcconfig = { 
     "HEADER_SEARCH_PATHS" => ["$(SDKROOT)/usr/include/libxml2", "$(SRCROOT)/../dependencies/include"],
