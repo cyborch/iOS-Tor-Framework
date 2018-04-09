@@ -3,6 +3,7 @@ Pod::Spec.new do |s|
   s.name         = "Tor"
   s.version      = "0.2.4-21"
   s.summary      = "Tor framework for iOS"
+  s.ios.deployment_target = '10.0'
 
   s.description  = <<-DESC
     Tor is free software and an open network that helps you defend
