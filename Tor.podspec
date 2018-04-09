@@ -43,6 +43,7 @@ Pod::Spec.new do |s|
   s.xcconfig = { 
     "OTHER_CFLAGS" => "-I$(SDKROOT)/usr/include/libxml2 -I$(PODS_ROOT)/Tor/dependencies/include -I$(PODS_ROOT)/Tor/dependencies/include/common -I$(PODS_ROOT)/Tor/iOS-Tor/ULINetSocket/Classes",
     "OTHER_LDFLAGS" => "-L$(PODS_ROOT)/Tor/dependencies/lib",
+    "ENABLE_BITCODE" => "NO"
   }
 
   s.dependency "ASIHTTPRequest", "~> 1.8.1"
