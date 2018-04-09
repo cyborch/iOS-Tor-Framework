@@ -41,8 +41,8 @@ Pod::Spec.new do |s|
   s.vendored_libraries = "dependencies/lib/*.a"
 
   s.xcconfig = { 
-    "OTHER_CFLAGS" => "-I$(SDKROOT)/usr/include/libxml2 -I$(SRCROOT)/../dependencies/include",
-    "OTHER_LDFLAGS" => "-L$(SRCROOT)/../dependencies/lib"
+    "OTHER_CFLAGS" => "-I$(SDKROOT)/usr/include/libxml2 -I$(PODS_ROOT)/Tor/dependencies/include -I$(PODS_ROOT)/Tor/dependencies/include/common -I$(PODS_ROOT)/Tor/iOS-Tor/ULINetSocket/Classes",
+    "OTHER_LDFLAGS" => "-L$(PODS_ROOT)/Tor/dependencies/lib",
   }
 
   s.dependency "ASIHTTPRequest", "~> 1.8.1"
