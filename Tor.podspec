@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
     :tag => "#{s.version}"
   }
 
-  s.subspec "no-arc" do |sp|
+  s.subspec "ULINetSocket" do |sp|
     sp.source_files = "iOS-Tor/ULINetSocket/Classes/*.m"
     sp.requires_arc = false
   end
