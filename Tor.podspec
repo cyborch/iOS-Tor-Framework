@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
 
   s.subspec "ULINetSocket" do |sp|
     sp.source_files = "iOS-Tor/ULINetSocket/Classes/*.m"
+    sp.private_header_files = "iOS-Tor/ULINetSocket/Classes/*.h"
     sp.requires_arc = false
   end
 
